@@ -115,6 +115,27 @@
   animation-play-state: paused;
 }
 
+/* Continuous Horizontal Marquee (Right-to-Left) for Brand Stickers Rail */
+@keyframes brand-marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.brand-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: brand-marquee-left 35s linear infinite;
+}
+
+.brand-marquee-track:hover {
+  animation-play-state: paused;
+}
+
 /* globals.css */
 
 .scrollbar-hide::-webkit-scrollbar {
